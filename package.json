@@ -1,0 +1,10 @@
+{
+  "name": "workflow",
+  "version": "1.0.0",
+  "description": "workflow Project",
+  "repository": {
+    "type": "git",
+    "url": "?.git"
+  },
+  "author": "walid belkziz"
+}
