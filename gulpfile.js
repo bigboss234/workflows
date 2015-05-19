@@ -34,10 +34,15 @@ gulp.task('compass', function() {
     .pipe(compass({
         sass: 'components/sass',
 		images: 'build/Dev/images',
-		style: 'compact'
+		style: 'nested'
     }))
     .pipe(gulp.dest('build/Dev/css'))
 });
 
+gulp.task('watch', function() {
+	gulp.watch(coffeeSources, ['coffee'])
+	gulp.watch(jsSources, ['js'])
+	gulp.watch('components/sass/*.scss', ['compass'])
+})
 
-gulp.task('default', ['coffee', 'js', 'compass']);
+gulp.task('default', ['coffee', 'js', 'compass', 'watch']);
