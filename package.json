@@ -6,5 +6,9 @@
     "type": "git",
     "url": "?.git"
   },
-  "author": "walid belkziz"
+  "author": "walid belkziz",
+  "dependencies": {
+    "gulp": "^3.8.11",
+    "gulp-util": "^3.0.4"
+  }
 }
