@@ -34,18 +34,10 @@ gulp.task('compass', function() {
     .pipe(compass({
         sass: 'components/sass',
 		images: 'build/Dev/images',
-		style: 'expanded'
+		style: 'compact'
     }))
     .pipe(gulp.dest('build/Dev/css'))
 });
 
-gulp.task('compass', function() {
-	gulp.src('components/sass/style.scss')
-		.pipe(compass({
-			sass: 'components/sass',
-			images: 'build/Dev/images',
-			style: 'nested'
-		})
-			.on('error', gutil.log))
-		.pipe(gulp.dest('build/Dev/css'))
-});
+
+gulp.task('default', ['coffee', 'js', 'compass']);
